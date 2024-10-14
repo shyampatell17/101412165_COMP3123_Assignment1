@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "08a826f4-ea1b-4072-9d97-3a0048004c89",
+		"name": "assignment_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38203294"
+	},
+	"item": [
+		{
+			"name": "Creating Employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"noteTitle\": \"Game Night\",\n    \"noteDescription\": \"Game Night at college at 8:00PM.\",\n    \"priority\": \"MEDIUM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp for User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"noteTitle\": \"Game Night\",\n    \"noteDescription\": \"Game Night at college at 8:00PM.\",\n    \"priority\": \"MEDIUM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login for User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"noteTitle\": \"Game Night\",\n    \"noteDescription\": \"Game Night at college at 8:00PM.\",\n    \"priority\": \"MEDIUM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting Employee Information",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updating Employee Information",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"noteTitle\": \"Game Night - Updated\",\n    \"noteDescription\": \"Game Night at college at 8:00PM.\",\n    \"priority\": \"MEDIUM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/notes/notes/670a0eb516ccab18da643f4f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"notes",
+						"notes",
+						"670a0eb516ccab18da643f4f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleting Employee Information",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/notes/notes/670a0eb516ccab18da643f4f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"notes",
+						"notes",
+						"670a0eb516ccab18da643f4f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting Employee Information with ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/notes/notes/670a0eb516ccab18da643f4f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"notes",
+						"notes",
+						"670a0eb516ccab18da643f4f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

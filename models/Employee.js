@@ -6,7 +6,12 @@ const employeeSchema = new mongoose.Schema(
     first_name: { type: String, required: true },
     last_name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
-    position: { type: String, required: true },
+    position: {
+      type: String,
+      required: true,
+      enum: ['HR', 'Manager', 'Employee', 'Intern'], // Predefined values
+      default: 'Employee', // Default value if not provided
+    },
     salary: { type: Number, required: true },
     date_of_joining: { type: Date, required: true },
     department: { type: String, required: true },

@@ -1,10 +1,14 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose'); // Mongoose for MongoDB connection
-const SERVER_PORT = process.env.SERVER_PORT || 300; // Server Hosting Port
+const SERVER_PORT = process.env.SERVER_PORT || 3000; // Server Hosting Port
 const employeeRoutes = require('./routes/empRoutes.js');
 const userRoutes = require('./routes/userRoutes.js')
 
 const app = express();
+
+// Enable CORS for all origins (you can configure it further)
+app.use(cors());
 
 // Middleware to parse incoming JSON requests
 app.use(express.json());

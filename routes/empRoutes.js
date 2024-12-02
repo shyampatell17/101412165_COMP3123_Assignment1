@@ -164,4 +164,27 @@ router.delete('/employees/:eid', async (req, res) => {
     }
 })
 
+router.get('/employee/search', async (req, res) => {
+  try {
+      const { department, position } = req.query; // Destructure from query and extract the department and position
+
+      // Build a dynamic query object
+      const query = {};
+      if (department) query.department = department; // the department query parameter is provided, it adds department to the query object
+      if (position) query.position = position; // If the position query parameter is provided, it adds position to the query object.
+
+
+      // Query the database with the build query
+      const employees = await Employee.find(query) // Get employees, which queries the database to find employees that match the criteria.
+      res.status(200).json(employees); // return the employee data as JSON with 200 status code.
+      
+  } catch (error) {
+
+      console.error('Error searching employees:', error);
+      res.status(500).json({ message: 'Failed to search employees' });
+      
+  }
+
+})
+
 module.exports = router;    
